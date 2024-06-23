@@ -1,6 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import ListCard from "../components/ListCard";
-import Nav from "../components/Nav";
 import { useEffect } from "react";
 import {
     updateCourseList,
@@ -9,60 +7,62 @@ import {
     updateIsLoading,
 } from "../context/slices/courseListSlice";
 import Spinner from "../components/Spinner";
+import Nav from "../components/Nav";
+import ListCard from "../components/ListCard";
 
-// const URL = "http://localhost:5000"
-const URL = require("../data/data.json");
+// Assuming URL is an imported JSON data
+import courseData from "../data/data.json"; // Replace with your data import strategy
+
 function CourseList() {
-
-    const data = useSelector((state) => state.courses.filters);
+    const dispatch = useDispatch();
+    const filters = useSelector((state) => state.courses.filters);
     const isLoading = useSelector((state) => state.courses.isLoading);
-    console.log(isLoading);
-
-    const disptach = useDispatch();
 
     useEffect(() => {
         async function fetchData() {
-            disptach(updateIsLoading(true));
+            dispatch(updateIsLoading(true));
 
             try {
+                // Simulate fetching data from an API (replace with actual fetch call)
                 // const response = await fetch(URL);
                 // if (!response.ok) {
-                // throw new Error("Failed to Fetch");
+                //     throw new Error("Failed to fetch data");
                 // }
                 // const result = await response.json();
-                const result = URL;
-                disptach(updateCourseList(result.courseModule));
-                disptach(updateFilters(result.courseModule));
+
+                // Using imported JSON data for demonstration
+                const result = courseData;
+                dispatch(updateCourseList(result.courseModule));
+                dispatch(updateFilters(result.courseModule));
             } catch (error) {
-                disptach(updateError(error));
+                dispatch(updateError(error.message));
             } finally {
-                disptach(updateIsLoading(false));
+                dispatch(updateIsLoading(false));
             }
         }
+
         fetchData();
-    }, []);
+    }, [dispatch]);
 
     return (
-        <>
+        <div className="min-h-screen bg-gray-100">
+            <div className="fixed top-0 w-full bg-blue-500 z-10 shadow-md">
+                <Nav link="/dashboard" title="Dashboard" type="courseDetailPage" />
+            </div>
+
             {isLoading ? (
                 <Spinner />
             ) : (
-                <div className="flex flex-col items-center justify-center max-w-[1200px] ">
-                    <div className="fixed top-0 bg-slate-200 z-10">
-                        <Nav
-                            link="/dashboard"
-                            title="Dashboard"
-                            type={"courseDetailPage"}
-                        />
-                    </div>
-                    <div className="mt-[7rem] sm:flex sm:flex-wrap justify-center items-center gap-5 ">
-                        {data?.map((curCourse) => (
+                <div className="container mx-auto py-8 px-4 mt-8">
+                    <h1 className="text-3xl font-bold text-center mt-8">Select Courses</h1>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {filters.map((curCourse) => (
                             <ListCard key={curCourse.id} curCourse={curCourse} />
                         ))}
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }
 

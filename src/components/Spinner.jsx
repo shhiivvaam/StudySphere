@@ -2,14 +2,9 @@ import React from "react";
 
 function Spinner() {
     return (
-        <div className="absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]">
-            <button type="button" className="bg-red-500 px-3 py-2" disabled>
-                <svg
-                    className="animate-spin h-5 w-5 mr-3 ..."
-                    viewBox="0 0 24 24"
-                ></svg>
-                Loading...
-            </button>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+            <span className="ml-3 text-gray-900">Loading...</span>
         </div>
     );
 }

@@ -5,7 +5,7 @@ import { updateFilters } from "../context/slices/courseListSlice";
 
 function Nav({ link, title, type }) {
     const data = useSelector((state) => state.courses.courseList);
-    const disptach = useDispatch();
+    const dispatch = useDispatch();
 
     const [searchInput, setSearchInput] = useState("");
 
@@ -37,33 +37,37 @@ function Nav({ link, title, type }) {
         const input = event.target.value;
         setSearchInput(input);
         const filteredResults = filterCourses(input);
-        disptach(updateFilters(filteredResults));
+        dispatch(updateFilters(filteredResults));
     };
 
     return (
-        <div className="mt-3 px-4 pb-6 border-b-2 ">
-            <ul className="relative flex justify-between items-center gap-2 w-[90dvw] max-w-[1440px]">
-                <li className="text-black font-bold cursor-pointer transition-all duration-500 hover:translate-y-1 text-[2rem]">
+        <div className="bg-white shadow-md">
+            <div className="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+                <div className="text-xl sm:text-2xl font-bold text-blue-600 mr-4">
                     <NavLink to="/">EduPath</NavLink>
-                </li>
-                {type === "courseDetailPage" ? (
-                    <li className="absolute top-[150%] left-[50%] translate-y-[-50%] translate-x-[-50%] flex items-center justify-center border-2 border-slate-500 px-2 rounded-full max-w-[18rem] sm:max-w-[20rem] cursor-pointer  sm:static sm:top-auto sm:left-auto sm:transform-none">
-                        <span>🔎</span>
+                </div>
+                {type === "courseDetailPage" && (
+                    <div className="flex items-center flex-1 ml-1 sm:ml-0">
+                        🔎
+                        {/* <span className="text-gray-500 mr-2">🔎</span> */}
                         <input
                             type="text"
-                            className="w-3 focus:w-[12rem]  py-1 focus:outline-none px-2 transition-all duration-300 rounded-full cursor-pointer bg-transparent focus:duration-700 sm:focus:w-[25rem]"
-                            placeholder="Course name, instructor, language "
+                            className="w-full py-2 px-3 focus:outline-none border border-gray-300 rounded-full transition-all duration-300"
+                            placeholder="Search courses..."
                             value={searchInput}
                             onChange={handleInputChange}
                         />
-                    </li>
-                ) : (
-                    ""
+                    </div>
                 )}
-                <li className="text-blue-500 font-semibold hover:translate-y-1 transition-all duration-1000 text-[1.2rem]">
-                    <NavLink to={link}>{title}</NavLink>
-                </li>
-            </ul>
+                <div className="text-lg font-semibold ml-4">
+                    <NavLink
+                        to={link}
+                        className="text-blue-600 hover:text-blue-700 transition-colors duration-300"
+                    >
+                        {title}
+                    </NavLink>
+                </div>
+            </div>
         </div>
     );
 }

@@ -11,8 +11,15 @@ function ProgressBar({ courseCompleted }) {
     let width = `${progress}%`;
 
     return (
-        <div className="h-4 bg-gray-200 w-full rounded-full overflow-hidden mt-2 mb-2">
-            <div className="h-full bg-blue-500" style={{ width }}></div>
+        <div className="w-full h-4 bg-gray-200 rounded-full overflow-hidden mt-2 mb-2">
+            <div
+                className="h-full bg-blue-500"
+                style={{ width }}
+                role="progressbar"
+                aria-valuenow={progress}
+                aria-valuemin="0"
+                aria-valuemax="100"
+            ></div>
         </div>
     );
 }

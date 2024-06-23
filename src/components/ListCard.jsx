@@ -3,12 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { updateSelectedCourse } from "../context/slices/courseListSlice";
 import ProgressBar from "./ProgressBar";
 import { updateCourseCompletion } from "../context/slices/dashboardSlice";
-
+import course from "../assets/images/course.png"; // Replace with your actual image URL
 
 function ListCard({ curCourse, type }) {
     const navigate = useNavigate();
-    const disptach = useDispatch();
-    const sampleImageURL = "http://tinyurl.com/3p5mwrkb";
+    const dispatch = useDispatch();
 
     const {
         id,
@@ -20,63 +19,61 @@ function ListCard({ curCourse, type }) {
         courseComplete,
     } = curCourse;
 
-    function handleOnClick() {
-        disptach(updateSelectedCourse(curCourse));
+    const handleOnClick = () => {
+        dispatch(updateSelectedCourse(curCourse));
         navigate("/course-details");
-    }
+    };
 
-    function handleDashboardCourseClick() {
-        disptach(updateCourseCompletion(id));
-    }
+    const handleDashboardCourseClick = () => {
+        dispatch(updateCourseCompletion(id));
+    };
 
     return (
-        <div className="w-[300px]  mt-10 p-3 sm:mt-8 border border-slate-300 sm:w-[400px]  hover:scale-105 transition-all duration-500 flex justify-center items-center">
+        <div className="w-full sm:w-72 mx-auto mt-10 p-4 sm:mt-8 border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out">
             <div className="flex flex-col items-center">
-                <div className="flex items-center justify-center ">
-                    <img src={sampleImageURL} alt="img"></img>
+                <div className="w-full h-40 overflow-hidden rounded-t-lg">
+                    <img
+                        src={course}
+                        alt="Course Thumbnail"
+                        className="object-cover w-full h-full"
+                    />
                 </div>
-                <div className="mt-2">
-                    <h2 className="font-semibold text-[1.2rem]">{name}</h2>
-                    <p className="text-slate-400 font-medium mt-[-5px] mb-1">
-                        {instructor}
-                    </p>
-                    <p className="">{description}</p>
+                <div className="mt-4 flex flex-col items-center w-full">
+                    <h2 className="text-xl font-semibold mb-1">{name}</h2>
+                    <p className="text-gray-500 text-sm mb-2">{instructor}</p>
+                    <p className="text-gray-600 text-sm text-center">{description}</p>
                     {type !== "dashboard" ? (
-                        <div className="mt-4 mb-2 flex justify-between items-center">
-                            <span
-                                className={`${enrollmentStatus === "Open" ? "bg-green-500" : "bg-red-500"
-                                    } px-3 p-1 text-white font-medium rounded-md`}
-                            >
+                        <div className="mt-4 w-full flex items-center justify-between">
+                            <span className={`px-3 py-1 rounded-md text-white ${enrollmentStatus === "Open" ? "bg-green-500" : "bg-red-500"}`}>
                                 {enrollmentStatus}
                             </span>
-                            <span className="bg-slate-500 px-3 p-1 text-white font-medium rounded-md ">
+                            <span className="px-3 py-1 rounded-md bg-gray-400 text-white">
                                 {duration}
                             </span>
-                            <span
-                                className="bg-blue-600 px-3 p-1 text-white font-medium rounded-md cursor-pointer"
-                                onClick={() => handleOnClick()}
+                            <button
+                                className="px-4 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none"
+                                onClick={handleOnClick}
                             >
-                                Details →
-                            </span>
+                                Details
+                            </button>
                         </div>
                     ) : (
-                        <div className="flex flex-col justify-center  items-center">
-                            <p>
-                                <span className="font-semibold">Due in:</span>
-                                {duration}
+                        <div className="mt-4 w-full flex flex-col items-center">
+                            <p className="text-gray-600">
+                                <span className="font-semibold">Due in:</span> {duration}
                             </p>
                             <ProgressBar courseCompleted={courseComplete} />
                             {courseComplete ? (
                                 <button
-                                    onClick={() => handleDashboardCourseClick()}
-                                    className="bg-green-500 px-3 p-1 text-white font-medium rounded-md mt-2"
+                                    className="px-4 py-1 mt-2 rounded-md bg-green-500 text-white"
+                                    disabled
                                 >
                                     Completed 😍
                                 </button>
                             ) : (
                                 <button
-                                    onClick={() => handleDashboardCourseClick()}
-                                    className="bg-slate-500 px-3 p-1 text-white font-medium rounded-md mt-2 cursor-pointer"
+                                    className="px-4 py-1 mt-2 rounded-md bg-blue-600 text-white hover:bg-blue-700 focus:outline-none"
+                                    onClick={handleDashboardCourseClick}
                                 >
                                     Complete the Course
                                 </button>
