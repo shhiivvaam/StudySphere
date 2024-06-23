@@ -1,6 +1,7 @@
 <h1 align="center"> Study Sphere </h1>
 
 ### Live Link:
+    https://shhiivvaam.github.io/StudySphere/
 
 ### OBJECTIVE :
 
