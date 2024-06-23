@@ -10,7 +10,7 @@ function Dashboard() {
     return (
         <div className="min-h-screen bg-gray-100">
             <div className="fixed top-0 w-full bg-slate-200 z-10">
-                <Nav link={"/"} title={"All Courses"} />
+                <Nav link={"/StudySphere"} title={"All Courses"} />
             </div>
             <div className="container mx-auto py-10 px-4">
                 <h1 className="text-3xl font-bold text-center mt-8">Dashboard</h1>

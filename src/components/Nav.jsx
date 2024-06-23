@@ -42,7 +42,7 @@ function Nav({ link, title, type }) {
         <div className="bg-white shadow-md">
             <div className="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                 <div className="text-xl sm:text-2xl font-bold text-blue-600 mr-4">
-                    <NavLink to="/">StudySphere</NavLink>
+                    <NavLink to="/StudySphere">StudySphere</NavLink>
                 </div>
                 {type === "courseDetailPage" && (
                     <div className="flex items-center flex-1 ml-1 sm:ml-0">
