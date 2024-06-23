@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/StudySphere/static/css/main.e818d852.css",
+    "main.js": "/StudySphere/static/js/main.0107f8e5.js",
+    "static/media/course.png": "/StudySphere/static/media/course.f2bb4272e6737450f935.png",
+    "index.html": "/StudySphere/index.html",
+    "main.e818d852.css.map": "/StudySphere/static/css/main.e818d852.css.map",
+    "main.0107f8e5.js.map": "/StudySphere/static/js/main.0107f8e5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e818d852.css",
+    "static/js/main.0107f8e5.js"
+  ]
+}
