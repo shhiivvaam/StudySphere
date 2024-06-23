@@ -1,0 +1,722 @@
+{
+    "courseModule": [
+        {
+            "id": 1,
+            "name": "Introduction to Python Programming",
+            "instructor": "Dr. Alice Miller",
+            "description": "Master the fundamentals of Python, a versatile programming language used for web development, data analysis, and more.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/python_logo",
+            "duration": "8 weeks",
+            "schedule": "Tuesdays and Thursdays, 7:00 PM - 9:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "No prior programming experience required"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to Python",
+                    "content": "Setting up your development environment, basic syntax, and data types."
+                },
+                {
+                    "week": 2,
+                    "topic": "Variables and Operators",
+                    "content": "Working with variables, performing operations, and user input."
+                },
+                {
+                    "week": 3,
+                    "topic": "Control Flow Statements",
+                    "content": "Conditional statements (if/else) and loops (for/while) for program control."
+                },
+                {
+                    "week": 4,
+                    "topic": "Functions",
+                    "content": "Creating reusable blocks of code with functions and arguments."
+                },
+                {
+                    "week": 5,
+                    "topic": "Lists and Tuples",
+                    "content": "Storing and manipulating ordered and unordered collections of data."
+                },
+                {
+                    "week": 6,
+                    "topic": "Dictionaries",
+                    "content": "Working with key-value pairs for efficient data organization."
+                },
+                {
+                    "week": 7,
+                    "topic": "Modules and Packages",
+                    "content": "Reusing code and extending functionality with modules and packages."
+                },
+                {
+                    "week": 8,
+                    "topic": "Introduction to File I/O",
+                    "content": "Reading from and writing to files for data persistence."
+                }
+            ],
+            "students": [
+                {
+                    "id": 101,
+                    "name": "Brandon Lee",
+                    "email": "brandon.lee@example.com"
+                },
+                {
+                    "id": 102,
+                    "name": "Chloe Martinez",
+                    "email": "chloe.martinez@example.com"
+                },
+                {
+                    "id": 103,
+                    "name": "David Wang",
+                    "email": "david.wang@example.com"
+                },
+                {
+                    "id": 104,
+                    "name": "Emily Johnson",
+                    "email": "emily.johnson@example.com"
+                },
+                {
+                    "id": 105,
+                    "name": "Michael Brown",
+                    "email": "michael.brown@example.com"
+                },
+                {
+                    "id": 106,
+                    "name": "Sarah Wilson",
+                    "email": "sarah.wilson@example.com"
+                },
+                {
+                    "id": 107,
+                    "name": "James Taylor",
+                    "email": "james.taylor@example.com"
+                },
+                {
+                    "id": 108,
+                    "name": "Olivia White",
+                    "email": "olivia.white@example.com"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Advanced Data Structures and Algorithms",
+            "instructor": "Dr. John Doe",
+            "description": "Deep dive into complex data structures and algorithms, essential for efficient programming and technical interviews.",
+            "enrollmentStatus": "Closed",
+            "thumbnail": "/images/algorithms_logo",
+            "duration": "10 weeks",
+            "schedule": "Mondays and Wednesdays, 6:00 PM - 8:00 PM",
+            "location": "Campus Room 204",
+            "prerequisites": [
+                "Basic programming knowledge",
+                "Introduction to Python Programming or equivalent"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction and Recap",
+                    "content": "Review of basic data structures and introduction to algorithm analysis."
+                },
+                {
+                    "week": 2,
+                    "topic": "Advanced Arrays and Linked Lists",
+                    "content": "In-depth study of arrays and linked lists, including dynamic arrays and doubly linked lists."
+                },
+                {
+                    "week": 3,
+                    "topic": "Stacks and Queues",
+                    "content": "Implementation and applications of stack and queue data structures."
+                },
+                {
+                    "week": 4,
+                    "topic": "Trees and Graphs",
+                    "content": "Understanding tree and graph data structures and their traversal algorithms."
+                },
+                {
+                    "week": 5,
+                    "topic": "Hashing",
+                    "content": "Hash functions, hash tables, and collision resolution techniques."
+                },
+                {
+                    "week": 6,
+                    "topic": "Sorting Algorithms",
+                    "content": "Analysis and implementation of various sorting algorithms."
+                },
+                {
+                    "week": 7,
+                    "topic": "Search Algorithms",
+                    "content": "Different search algorithms and their efficiencies."
+                },
+                {
+                    "week": 8,
+                    "topic": "Dynamic Programming",
+                    "content": "Principles and applications of dynamic programming."
+                },
+                {
+                    "week": 9,
+                    "topic": "Greedy Algorithms",
+                    "content": "Understanding and applying greedy algorithm techniques."
+                },
+                {
+                    "week": 10,
+                    "topic": "Algorithm Optimization",
+                    "content": "Techniques for optimizing and analyzing the performance of algorithms."
+                }
+            ],
+            "students": [
+                {
+                    "id": 201,
+                    "name": "Anna Smith",
+                    "email": "anna.smith@example.com"
+                },
+                {
+                    "id": 202,
+                    "name": "Brian Davis",
+                    "email": "brian.davis@example.com"
+                },
+                {
+                    "id": 203,
+                    "name": "Clara Evans",
+                    "email": "clara.evans@example.com"
+                },
+                {
+                    "id": 204,
+                    "name": "Daniel Wilson",
+                    "email": "daniel.wilson@example.com"
+                },
+                {
+                    "id": 205,
+                    "name": "Eva Green",
+                    "email": "eva.green@example.com"
+                },
+                {
+                    "id": 206,
+                    "name": "George King",
+                    "email": "george.king@example.com"
+                },
+                {
+                    "id": 207,
+                    "name": "Hannah Scott",
+                    "email": "hannah.scott@example.com"
+                },
+                {
+                    "id": 208,
+                    "name": "Isaac Lee",
+                    "email": "isaac.lee@example.com"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Web Development with JavaScript",
+            "instructor": "Dr. Susan Clark",
+            "description": "Learn to create dynamic and interactive web pages using JavaScript, the language of the web.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/javascript_logo",
+            "duration": "8 weeks",
+            "schedule": "Fridays, 5:00 PM - 7:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "Basic HTML and CSS knowledge"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to JavaScript",
+                    "content": "JavaScript basics, syntax, and linking to HTML."
+                },
+                {
+                    "week": 2,
+                    "topic": "Variables and Data Types",
+                    "content": "Using variables, data types, and operators in JavaScript."
+                },
+                {
+                    "week": 3,
+                    "topic": "Control Flow",
+                    "content": "Conditional statements and loops."
+                },
+                {
+                    "week": 4,
+                    "topic": "Functions",
+                    "content": "Creating and using functions in JavaScript."
+                },
+                {
+                    "week": 5,
+                    "topic": "DOM Manipulation",
+                    "content": "Interacting with the Document Object Model to create dynamic web pages."
+                },
+                {
+                    "week": 6,
+                    "topic": "Events",
+                    "content": "Handling user interactions with events."
+                },
+                {
+                    "week": 7,
+                    "topic": "APIs",
+                    "content": "Using JavaScript to interact with web APIs."
+                },
+                {
+                    "week": 8,
+                    "topic": "Advanced JavaScript",
+                    "content": "Introduction to ES6 and beyond, asynchronous JavaScript."
+                }
+            ],
+            "students": [
+                {
+                    "id": 301,
+                    "name": "Jack Thompson",
+                    "email": "jack.thompson@example.com"
+                },
+                {
+                    "id": 302,
+                    "name": "Karen Robinson",
+                    "email": "karen.robinson@example.com"
+                },
+                {
+                    "id": 303,
+                    "name": "Leo Turner",
+                    "email": "leo.turner@example.com"
+                },
+                {
+                    "id": 304,
+                    "name": "Mia Walker",
+                    "email": "mia.walker@example.com"
+                },
+                {
+                    "id": 305,
+                    "name": "Nina Young",
+                    "email": "nina.young@example.com"
+                },
+                {
+                    "id": 306,
+                    "name": "Oscar Hernandez",
+                    "email": "oscar.hernandez@example.com"
+                },
+                {
+                    "id": 307,
+                    "name": "Paul Allen",
+                    "email": "paul.allen@example.com"
+                },
+                {
+                    "id": 308,
+                    "name": "Quinn Baker",
+                    "email": "quinn.baker@example.com"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Introduction to Machine Learning",
+            "instructor": "Dr. Robert Johnson",
+            "description": "An introductory course on machine learning concepts, algorithms, and applications.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/ml_logo",
+            "duration": "12 weeks",
+            "schedule": "Wednesdays, 4:00 PM - 6:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "Basic Python programming",
+                "Statistics knowledge recommended"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to Machine Learning",
+                    "content": "Overview of machine learning and its applications."
+                },
+                {
+                    "week": 2,
+                    "topic": "Supervised Learning",
+                    "content": "Understanding supervised learning and common algorithms."
+                },
+                {
+                    "week": 3,
+                    "topic": "Regression",
+                    "content": "Linear regression and its applications."
+                },
+                {
+                    "week": 4,
+                    "topic": "Classification",
+                    "content": "Classification algorithms and techniques."
+                },
+                {
+                    "week": 5,
+                    "topic": "Model Evaluation",
+                    "content": "Evaluating model performance and metrics."
+                },
+                {
+                    "week": 6,
+                    "topic": "Unsupervised Learning",
+                    "content": "Clustering and association."
+                },
+                {
+                    "week": 7,
+                    "topic": "Neural Networks",
+                    "content": "Introduction to neural networks and deep learning."
+                },
+                {
+                    "week": 8,
+                    "topic": "Support Vector Machines",
+                    "content": "Understanding support vector machines."
+                },
+                {
+                    "week": 9,
+                    "topic": "Ensemble Methods",
+                    "content": "Combining models for better performance."
+                },
+                {
+                    "week": 10,
+                    "topic": "Dimensionality Reduction",
+                    "content": "Techniques to reduce the number of variables in a dataset."
+                },
+                {
+                    "week": 11,
+                    "topic": "Reinforcement Learning",
+                    "content": "Introduction to reinforcement learning."
+                },
+                {
+                    "week": 12,
+                    "topic": "Final Project",
+                    "content": "Applying learned concepts to a final project."
+                }
+            ],
+            "students": [
+                {
+                    "id": 401,
+                    "name": "Rachel Moore",
+                    "email": "rachel.moore@example.com"
+                },
+                {
+                    "id": 402,
+                    "name": "Steve Clark",
+                    "email": "steve.clark@example.com"
+                },
+                {
+                    "id": 403,
+                    "name": "Tina Martinez",
+                    "email": "tina.martinez@example.com"
+                },
+                {
+                    "id": 404,
+                    "name": "Umar Patel",
+                    "email": "umar.patel@example.com"
+                },
+                {
+                    "id": 405,
+                    "name": "Victoria Brown",
+                    "email": "victoria.brown@example.com"
+                },
+                {
+                    "id": 406,
+                    "name": "Will Harris",
+                    "email": "will.harris@example.com"
+                },
+                {
+                    "id": 407,
+                    "name": "Xander Lee",
+                    "email": "xander.lee@example.com"
+                },
+                {
+                    "id": 408,
+                    "name": "Yara Scott",
+                    "email": "yara.scott@example.com"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Database Management Systems",
+            "instructor": "Dr. Linda Carter",
+            "description": "Comprehensive course on database design, SQL, and database management.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/dbms_logo",
+            "duration": "10 weeks",
+            "schedule": "Thursdays, 3:00 PM - 5:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "Basic programming knowledge"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to Databases",
+                    "content": "Basics of databases and their importance."
+                },
+                {
+                    "week": 2,
+                    "topic": "Database Design",
+                    "content": "Designing databases and data modeling."
+                },
+                {
+                    "week": 3,
+                    "topic": "SQL Basics",
+                    "content": "Introduction to SQL and basic queries."
+                },
+                {
+                    "week": 4,
+                    "topic": "Advanced SQL",
+                    "content": "Complex queries, joins, and subqueries."
+                },
+                {
+                    "week": 5,
+                    "topic": "Normalization",
+                    "content": "Database normalization and denormalization."
+                },
+                {
+                    "week": 6,
+                    "topic": "Transactions and Concurrency",
+                    "content": "Managing transactions and ensuring data integrity."
+                },
+                {
+                    "week": 7,
+                    "topic": "Indexing and Optimization",
+                    "content": "Improving database performance with indexing."
+                },
+                {
+                    "week": 8,
+                    "topic": "NoSQL Databases",
+                    "content": "Introduction to NoSQL and its use cases."
+                },
+                {
+                    "week": 9,
+                    "topic": "Database Security",
+                    "content": "Ensuring the security of databases."
+                },
+                {
+                    "week": 10,
+                    "topic": "Final Project",
+                    "content": "Designing and implementing a database project."
+                }
+            ],
+            "students": [
+                {
+                    "id": 501,
+                    "name": "Zara Khan",
+                    "email": "zara.khan@example.com"
+                },
+                {
+                    "id": 502,
+                    "name": "Alex Murphy",
+                    "email": "alex.murphy@example.com"
+                },
+                {
+                    "id": 503,
+                    "name": "Bella Martinez",
+                    "email": "bella.martinez@example.com"
+                },
+                {
+                    "id": 504,
+                    "name": "Carlos Ramirez",
+                    "email": "carlos.ramirez@example.com"
+                },
+                {
+                    "id": 505,
+                    "name": "Diana Phillips",
+                    "email": "diana.phillips@example.com"
+                },
+                {
+                    "id": 506,
+                    "name": "Ethan Foster",
+                    "email": "ethan.foster@example.com"
+                },
+                {
+                    "id": 507,
+                    "name": "Fiona Davis",
+                    "email": "fiona.davis@example.com"
+                },
+                {
+                    "id": 508,
+                    "name": "George White",
+                    "email": "george.white@example.com"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Introduction to Cybersecurity",
+            "instructor": "Dr. Michael Clark",
+            "description": "Learn the fundamentals of cybersecurity, including risk management, threat analysis, and protective measures.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/cybersecurity_logo",
+            "duration": "8 weeks",
+            "schedule": "Tuesdays, 2:00 PM - 4:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "Basic IT knowledge"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to Cybersecurity",
+                    "content": "Overview of cybersecurity and its importance."
+                },
+                {
+                    "week": 2,
+                    "topic": "Threats and Vulnerabilities",
+                    "content": "Understanding various cyber threats and vulnerabilities."
+                },
+                {
+                    "week": 3,
+                    "topic": "Risk Management",
+                    "content": "Risk assessment and management strategies."
+                },
+                {
+                    "week": 4,
+                    "topic": "Network Security",
+                    "content": "Securing networks and data transmission."
+                },
+                {
+                    "week": 5,
+                    "topic": "Cryptography",
+                    "content": "Basics of cryptography and its applications."
+                },
+                {
+                    "week": 6,
+                    "topic": "Security Policies",
+                    "content": "Developing and implementing security policies."
+                },
+                {
+                    "week": 7,
+                    "topic": "Incident Response",
+                    "content": "Responding to and managing security incidents."
+                },
+                {
+                    "week": 8,
+                    "topic": "Future Trends",
+                    "content": "Emerging trends and technologies in cybersecurity."
+                }
+            ],
+            "students": [
+                {
+                    "id": 601,
+                    "name": "Helen Carter",
+                    "email": "helen.carter@example.com"
+                },
+                {
+                    "id": 602,
+                    "name": "Ivan Scott",
+                    "email": "ivan.scott@example.com"
+                },
+                {
+                    "id": 603,
+                    "name": "Jake Wilson",
+                    "email": "jake.wilson@example.com"
+                },
+                {
+                    "id": 604,
+                    "name": "Laura Garcia",
+                    "email": "laura.garcia@example.com"
+                },
+                {
+                    "id": 605,
+                    "name": "Mark Robinson",
+                    "email": "mark.robinson@example.com"
+                },
+                {
+                    "id": 606,
+                    "name": "Nina Parker",
+                    "email": "nina.parker@example.com"
+                },
+                {
+                    "id": 607,
+                    "name": "Olivia Harris",
+                    "email": "olivia.harris@example.com"
+                },
+                {
+                    "id": 608,
+                    "name": "Patrick Johnson",
+                    "email": "patrick.johnson@example.com"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Data Analysis with Python",
+            "instructor": "Dr. Lisa Evans",
+            "description": "Learn data analysis techniques using Python, including data manipulation and visualization.",
+            "enrollmentStatus": "Open",
+            "thumbnail": "/images/data_analysis_logo",
+            "duration": "6 weeks",
+            "schedule": "Mondays, 1:00 PM - 3:00 PM",
+            "location": "Online",
+            "prerequisites": [
+                "Basic Python programming"
+            ],
+            "syllabus": [
+                {
+                    "week": 1,
+                    "topic": "Introduction to Data Analysis",
+                    "content": "Overview of data analysis and its importance."
+                },
+                {
+                    "week": 2,
+                    "topic": "Data Manipulation",
+                    "content": "Using pandas for data manipulation."
+                },
+                {
+                    "week": 3,
+                    "topic": "Data Visualization",
+                    "content": "Visualizing data using matplotlib and seaborn."
+                },
+                {
+                    "week": 4,
+                    "topic": "Statistical Analysis",
+                    "content": "Basic statistical analysis with Python."
+                },
+                {
+                    "week": 5,
+                    "topic": "Working with Real-World Data",
+                    "content": "Handling and analyzing real-world datasets."
+                },
+                {
+                    "week": 6,
+                    "topic": "Final Project",
+                    "content": "Applying data analysis techniques to a final project."
+                }
+            ],
+            "students": [
+                {
+                    "id": 701,
+                    "name": "Rachel Moore",
+                    "email": "rachel.moore@example.com"
+                },
+                {
+                    "id": 702,
+                    "name": "Steve Clark",
+                    "email": "steve.clark@example.com"
+                },
+                {
+                    "id": 703,
+                    "name": "Tina Martinez",
+                    "email": "tina.martinez@example.com"
+                },
+                {
+                    "id": 704,
+                    "name": "Umar Patel",
+                    "email": "umar.patel@example.com"
+                },
+                {
+                    "id": 705,
+                    "name": "Victoria Brown",
+                    "email": "victoria.brown@example.com"
+                },
+                {
+                    "id": 706,
+                    "name": "Will Harris",
+                    "email": "will.harris@example.com"
+                },
+                {
+                    "id": 707,
+                    "name": "Xander Lee",
+                    "email": "xander.lee@example.com"
+                },
+                {
+                    "id": 708,
+                    "name": "Yara Scott",
+                    "email": "yara.scott@example.com"
+                }
+            ]
+        }
+    ]
+}
