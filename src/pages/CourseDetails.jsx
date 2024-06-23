@@ -1,10 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
 import Nav from "../components/Nav";
+import { useNavigate } from "react-router-dom";
 import { addStudentCourseDetails } from "../context/slices/dashboardSlice";
 import AccordionItem from "../components/AccordianTab"
 import course from "../assets/images/course.png"; // Replace with your actual image URL
 
 function CourseDetails() {
+    const navigate = useNavigate();
     const data = useSelector((state) => state.courses.selectedCourse);
     const studentCourseDetails = useSelector(
         (state) => state.dashboard.studentCourseDetails
@@ -23,26 +25,32 @@ function CourseDetails() {
 
     const dispatch = useDispatch();
 
-    // Function to handle Enroll button
     function handleEnroll() {
         dispatch(addStudentCourseDetails(data));
     }
 
-    // Check if the course is already enrolled
     const isEnrolled = studentCourseDetails.some(
         (course) => course.id === data.id
     );
 
-    // Styling
     const spanStyles = "font-semibold block tracking-wide";
 
     return (
         <div className="min-h-screen bg-gray-100">
             <Nav link={"/dashboard"} title={"Dashboard"} type={"courseDetailPage"} />
 
-            <div className="container mx-auto px-4 py-8 md:py-12">
+            <div className="container mx-auto px-4 py-8 md:py-5">
+                {/* <button onClick={() => navigate(-1)}>back</button> */}
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="max-w-md">
+                        <div className="container mx-auto px-4 py-8 md:py-12">
+                            <button
+                                onClick={() => navigate(-1)}
+                                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                            >
+                                Back
+                            </button>
+                        </div>
                         <img src={course} alt="Course" className="w-full rounded-lg shadow-md mb-4" />
                         <div className="flex justify-center">
                             {!isEnrolled && enrollmentStatus !== "Closed" ? (
@@ -88,13 +96,13 @@ function CourseDetails() {
                             ))}
                         </p>
                         <div className="mt-4 flex justify-between items-center">
+                            <span className="px-3 py-1 bg-slate-500 text-white rounded-md">
+                                {duration}
+                            </span>
                             <span
                                 className={`px-3 py-1 rounded-md text-white ${enrollmentStatus === "Open" ? "bg-green-500" : "bg-red-500"}`}
                             >
                                 {enrollmentStatus}
-                            </span>
-                            <span className="px-3 py-1 bg-slate-500 text-white rounded-md">
-                                {duration}
                             </span>
                         </div>
                     </div>
@@ -114,7 +122,7 @@ function CourseDetails() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

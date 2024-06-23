@@ -29,7 +29,8 @@ function ListCard({ curCourse, type }) {
     };
 
     return (
-        <div className="w-full sm:w-72 mx-auto mt-10 p-4 sm:mt-8 border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out">
+        <div className="w-full sm:w-72 mx-auto mt-10 p-4 sm:mt-8 border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+            onClick={handleOnClick}>
             <div className="flex flex-col items-center">
                 <div className="w-full h-40 overflow-hidden rounded-t-lg">
                     <img

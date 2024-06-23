@@ -10,8 +10,7 @@ import Spinner from "../components/Spinner";
 import Nav from "../components/Nav";
 import ListCard from "../components/ListCard";
 
-// Assuming URL is an imported JSON data
-import courseData from "../data/data.json"; // Replace with your data import strategy
+import courseData from "../data/data.json";
 
 function CourseList() {
     const dispatch = useDispatch();
@@ -23,14 +22,11 @@ function CourseList() {
             dispatch(updateIsLoading(true));
 
             try {
-                // Simulate fetching data from an API (replace with actual fetch call)
                 // const response = await fetch(URL);
                 // if (!response.ok) {
                 //     throw new Error("Failed to fetch data");
                 // }
                 // const result = await response.json();
-
-                // Using imported JSON data for demonstration
                 const result = courseData;
                 dispatch(updateCourseList(result.courseModule));
                 dispatch(updateFilters(result.courseModule));

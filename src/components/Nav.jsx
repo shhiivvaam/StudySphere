@@ -9,7 +9,6 @@ function Nav({ link, title, type }) {
 
     const [searchInput, setSearchInput] = useState("");
 
-    // Function to filter courses based on user input
     const filterCourses = (input) => {
         const userInputLowerCase = input.toLowerCase().trim();
         const searchTerms = userInputLowerCase
@@ -32,7 +31,6 @@ function Nav({ link, title, type }) {
         return filteredCourses;
     };
 
-    // Function to handle input change
     const handleInputChange = (event) => {
         const input = event.target.value;
         setSearchInput(input);
@@ -44,12 +42,11 @@ function Nav({ link, title, type }) {
         <div className="bg-white shadow-md">
             <div className="container mx-auto py-4 px-4 sm:px-6 lg:px-8 flex items-center justify-between">
                 <div className="text-xl sm:text-2xl font-bold text-blue-600 mr-4">
-                    <NavLink to="/">EduPath</NavLink>
+                    <NavLink to="/">StudySphere</NavLink>
                 </div>
                 {type === "courseDetailPage" && (
                     <div className="flex items-center flex-1 ml-1 sm:ml-0">
                         🔎
-                        {/* <span className="text-gray-500 mr-2">🔎</span> */}
                         <input
                             type="text"
                             className="w-full py-2 px-3 focus:outline-none border border-gray-300 rounded-full transition-all duration-300"
@@ -59,7 +56,7 @@ function Nav({ link, title, type }) {
                         />
                     </div>
                 )}
-                <div className="text-lg font-semibold ml-4">
+                <div className="text-lg font-semibold ml-2">
                     <NavLink
                         to={link}
                         className="text-blue-600 hover:text-blue-700 transition-colors duration-300"
