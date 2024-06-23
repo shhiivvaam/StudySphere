@@ -12,8 +12,8 @@ function Dashboard() {
             <div className="fixed top-0 w-full bg-slate-200 z-10">
                 <Nav link={"/"} title={"All Courses"} />
             </div>
-            <div className="container mx-auto py-12 px-4">
-                <h1 className="text-3xl font-bold text-center mb-8 mt-8">Dashboard</h1>
+            <div className="container mx-auto py-10 px-4">
+                <h1 className="text-3xl font-bold text-center mt-8">Dashboard</h1>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {studentCourseDetails.map((curCourse) => (
                         <ListCard
