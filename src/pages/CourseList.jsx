@@ -10,8 +10,10 @@ import {
 } from "../context/slices/courseListSlice";
 import Spinner from "../components/Spinner";
 
-// const URL = // TODO : base API Link
+// const URL = "http://localhost:5000"
+const URL = require("../data/data.json");
 function CourseList() {
+
     const data = useSelector((state) => state.courses.filters);
     const isLoading = useSelector((state) => state.courses.isLoading);
     console.log(isLoading);
@@ -23,11 +25,12 @@ function CourseList() {
             disptach(updateIsLoading(true));
 
             try {
-                const response = await fetch(URL);
-                if (!response.ok) {
-                    throw new Error("Failed to Fetch");
-                }
-                const result = await response.json();
+                // const response = await fetch(URL);
+                // if (!response.ok) {
+                // throw new Error("Failed to Fetch");
+                // }
+                // const result = await response.json();
+                const result = URL;
                 disptach(updateCourseList(result.courseModule));
                 disptach(updateFilters(result.courseModule));
             } catch (error) {
